@@ -27,7 +27,7 @@ You can deploy this project 2 different ways.
 1. Create the argocd namespace.
     * `kubectl apply -f templates/namespace.yaml`
 2. Deploy argocd into the namespace.
-    *`kubectl apply -n argo-worklflows -f templates/argo-install.yaml`
+    * `kubectl apply -n argo-worklflows -f templates/argo-install.yaml`
 
 ### Expose the argocd UI
 `kubectl -n argo port-forward deployment/argo-server 2746:2746`
