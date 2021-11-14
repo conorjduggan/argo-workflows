@@ -10,14 +10,16 @@ Based off of https://argoproj.github.io/argo-workflows/quick-start/
 You can deploy this project 2 different ways.
 
 ### Deploying directly from the inside the project
-1. Deploy the Helm chart.
-    * `helm install argo-worklflows argo-worklflows`
+1. Create the argo namespace.
+    * `kubectl apply -f templates/namespace.yaml`
+2. Deploy argo workflows.
+    * `kubectl apply -f templates/argo-install.yaml`
 
 ### Packaging the project and unstalling the tar file
 1. We need to be outside the repo before we run these commands.
     * `cd ..`
 2. Package the Helm chart.
-    * `helm package argo-worklflows`
+    * `helm package argo-workflows`
 3. Deploy the Helm chart.
     * `helm install argo-worklflows argo-worklflows`
 
